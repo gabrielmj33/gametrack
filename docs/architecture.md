@@ -30,3 +30,56 @@ The main objectives of GameTrack are:
 - Provide a simple and intuitive user experience.
 - Establish a foundation for future social and community-oriented features.
 - Demonstrate the application of software engineering principles through a complete software project.
+
+## 6. Core Features
+The initial version of GameTrack will contain the following core features:
+
+- User Profile
+
+- Users will have a personal profile containing their basic information and gaming-related data.
+
+Gaming Platform Accounts
+
+Users will be able to associate identifiers from supported gaming platforms with their GameTrack profile.
+
+Initially supported platforms are expected to include:
+
+- PlayStation
+- Xbox
+- Steam
+- Nintendo
+- GOG
+- Epic Games
+
+- Users will be able to designate which platform identifiers should be prominently displayed on their profile.
+
+- Game Library
+
+- Users will be able to maintain a personal library containing the games they want to track.
+
+- Game Status
+
+- Each game in a user's library can have a status representing the user's relationship with that game.
+
+Initial statuses:
+
+- Playing
+- Completed
+- Dropped
+- Ratings
+
+- Users will be able to assign a personal rating to games in their library.
+
+- Reviews
+
+- Users will be able to write personal reviews for games they have added to their library.
+
+- Start and Completion Dates
+
+- Users will be able to record when they started and completed a game.
+
+- Friends
+
+- Users will be able to establish friendships with other GameTrack users.
+
+- The initial friendship system will focus on connecting users and viewing relevant profile information.
