@@ -10,7 +10,7 @@ With this platform, I aim to solve this problem and bring gamers from different 
 GameTrack will allow you to catalog the games you’ve finished, are currently playing, or have dropped.
 It will also let you create discussions and guides for the games you’ve just cataloged, enabling you to discuss and share experiences with others regarding the games you’ve beaten and enjoyed so much.
 
-## 4. Target Audience
+## 4. Target Audience.
 GameTrack is primarily intended for players who want to organize and document their gaming experiences and share with another players.
 The initial target audience includes:
 
@@ -18,7 +18,7 @@ The initial target audience includes:
 - Gamers looking for someone to talk to about that game they just played.
 - Gamers looking for guides/walkthroughs
 
-## 5. Objectives
+## 5. Objectives.
 The main objectives of GameTrack are:
 
 - Provide users with a centralized gaming profile.
@@ -31,7 +31,7 @@ The main objectives of GameTrack are:
 - Establish a foundation for future social and community-oriented features.
 - Demonstrate the application of software engineering principles through a complete software project.
 
-## 6. Core Features
+## 6. Core Features.
 The initial version of GameTrack will contain the following core features:
 
 - User Profile
@@ -51,15 +51,15 @@ Initially supported platforms are expected to include:
 - GOG
 - Epic Games
 
-- Users will be able to designate which platform identifiers should be prominently displayed on their profile.
+Users will be able to designate which platform identifiers should be prominently displayed on their profile.
 
-- Game Library
+Game Library
 
-- Users will be able to maintain a personal library containing the games they want to track.
+Users will be able to maintain a personal library containing the games they want to track.
 
-- Game Status
+Game Status
 
-- Each game in a user's library can have a status representing the user's relationship with that game.
+Each game in a user's library can have a status representing the user's relationship with that game.
 
 Initial statuses:
 
@@ -68,18 +68,42 @@ Initial statuses:
 - Dropped
 - Ratings
 
-- Users will be able to assign a personal rating to games in their library.
+Users will be able to assign a personal rating to games in their library.
 
-- Reviews
+Reviews
 
-- Users will be able to write personal reviews for games they have added to their library.
+Users will be able to write personal reviews for games they have added to their library.
 
-- Start and Completion Dates
+Start and Completion Dates
 
-- Users will be able to record when they started and completed a game.
+Users will be able to record when they started and completed a game.
 
-- Friends
+Friends
 
-- Users will be able to establish friendships with other GameTrack users.
+Users will be able to establish friendships with other GameTrack users.
 
-- The initial friendship system will focus on connecting users and viewing relevant profile information.
+The initial friendship system will focus on connecting users and viewing relevant profile information.
+
+Community tab:
+
+- Discussion topic linked to the game
+- Guide page linked to the game
+
+## 7. MVP Scope.
+
+The Minimum Viable Product (MVP) will focus on the fundamental functionality required to make GameTrack usable as a personal gaming tracking platform.
+
+The MVP will include:
+
+- User registration and authentication.
+- User profile.
+- Gaming platform identifiers.
+- Game library.
+- Game status management.
+- Personal game ratings.
+- Game reviews.
+- Start and completion dates.
+- Basic friendship functionality.
+- Basic profile visualization.
+- Basic game information and library organization.
+- 
