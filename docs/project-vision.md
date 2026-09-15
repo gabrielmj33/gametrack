@@ -157,67 +157,41 @@ The idea is to foster a united community on the site, where gamers can share the
 
 The initial user experience is expected to follow this general flow:
 
-User
- │
- ├── Register
- │
- ├── Create / Configure Profile
- │
- ├── Add Gaming Platform IDs
- │
- ├── Add Games to Library
- │
- ├── Define Game Status
- │
- ├── Record Start / Completion Dates
- │
- ├── Rate Games
- │
- ├── Write Reviews
- │
- └── Connect with Other Users
+User:
+- Register
+- Create / Configure Profile
+- Add Gaming Platform IDs
+- Add Games to Library
+- Define Game Status
+- Record Start / Completion Dates
+- Rate Games
+-  Write Reviews
+- Connect with Other Users
 
 A typical user interaction with a game may follow:
 
-Game
- │
- ├── Add to Library
- │
- ├── Set Status → Playing
- │
- ├── Set Start Date
- │
- ├── Play
- │
- ├── Set Status → Completed
- │
- ├── Set Completion Date
- │
- ├── Rate Game
- │
- └── Write Review
+Game:
+- Add to Library
+- Set Status → Playing
+- Set Start Date
+- Play
+- Set Status → Completed
+- Set Completion Date
+- Rate Game
+- Write Review
 
- Community Post
- │
- ├── Create a post
- │
- ├── Title 
- │
- ├── Description  
- │
- └── Select the game that is the subject of the post.
+Community Post:
+- Create a post
+- Title 
+- Description  
+- Select the game that is the subject of the post.
 
-  Community Guide
- │
- ├── Create a guide
- │
- ├── Title 
- │
- ├── Create chapters
- │
- ├── Chapter description
- │
- └── Select the game that is the subject of the post.
+Community Guide:
+- Create a guide
+- Title 
+- Create chapters
+- Chapter description
+- Select the game that is the subject of the post.
 
 This flow represents the expected high-level behavior of the system and will be refined during requirements analysis.
 
