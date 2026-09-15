@@ -26,6 +26,9 @@ The user must be able to link their Nintendo account to their profile.
 ### FR-004 — Add Epic Games Account
 The user must be able to link their Epic Games account to their profile.
 
+### FR-005 — Add Games
+The user must be able to add games to their profile.
+
 ## 2. Non-Functional Requirements
 
 ## 3. User Roles
