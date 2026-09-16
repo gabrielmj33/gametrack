@@ -160,3 +160,17 @@ The administrator may:
 Administrators are subject to the same platform rules as other users when interacting with community content, except when performing authorized moderation or administrative actions.
 
 ## 4. System Constraints
+
+- The GameTrack system must operate as a web-based application accessible through modern web browsers.
+
+- The system must require user authentication for actions that modify personal data, gaming libraries, reviews, friendships, or community content.
+
+- Users must only be allowed to modify data and content they own, unless they have authorized administrative permissions.
+
+- Community content must be subject to moderation mechanisms to allow administrators to handle content that violates the platform's rules.
+
+- The system must protect user credentials and sensitive account information from unauthorized access.
+
+- The system should be designed with a modular structure that allows additional gaming platforms, community features, and game-related functionality to be added in future versions.
+
+- The initial version of the system should prioritize the core gaming tracking and community functionality rather than attempting to integrate with every external gaming platform.
