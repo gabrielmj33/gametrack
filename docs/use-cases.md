@@ -81,3 +81,30 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 - FR-001
+
+## UC-002 - Log In
+
+**Actor:** Guest
+
+**Goal:**
+- Log In to an existing account
+
+**Preconditions:**
+1. The guest must have an existing GameTrack account.
+2. The login page must be accessible.
+
+**Main Flow**
+1. The guest accesses the login page.
+2. The guest enters their email and password.
+3. The system validates the provided credentials.
+4. The system authenticates the guest.
+5. The system grants access to the user's account.
+
+**Alternative Flows:**
+- If the provided email or password does not match the stored credentials, the system displays an appropriate message.
+
+**Postconditions:**
+- The guest is authenticated and logged in to the account.
+
+**Related Requirements:**
+- FR-002
