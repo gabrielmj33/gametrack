@@ -67,4 +67,17 @@ Create a new GameTrack account.
 
 **Main Flow:**
 1. The guest access the registration page.
-2. The 
+2. The guest provides the required registration information.
+3. The system validates the provided information.
+4. The system creates the user account.
+5. the system confirms the successful registration.
+
+**Alternative Flows:**
+- If the provided information is invalid, the system displays an appropriate validation message.
+- If the email or username is already registered, the system informs the guest and does not create the account.
+
+**Postconditions:**
+- A new GameTrack user account has been created.
+
+**Related Requirements:**
+- FR-001
