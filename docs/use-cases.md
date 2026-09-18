@@ -114,19 +114,21 @@ Create a new GameTrack account.
 **Actor:** Guest, User, Administrator
 
 **Goal:**
-- View the related user profile.
+- View a user's public profile.
 
 **Preconditions:**
 1. None.
 
 **Main Flow**
-1. Search for user ID to access the profile ou open an GameTrack linked profile URL.
+1. The actor searches for a GameTrack user or accesses a GameTrack profile URL.
+2. The system searches for the requested user profile.
+3. The system displays the user's public profile.
 
 **Alternative Flows:**
-- Access a page of a user that doesn't exist returning an error.
+- If the requested user does not exist, the system displays an appropriate error message.
 
 **Postconditions:**
-- See the public profile of a GameTrack profile that you searched for.
+- The actor can view the requested user's public profile.
 
 **Related Requirements:**
 - FR-014
