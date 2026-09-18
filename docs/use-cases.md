@@ -108,3 +108,25 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 - FR-002
+
+### UC-012 - View User Profile
+
+**Actor:** Guest, User, Administrator
+
+**Goal:**
+- View the related user profile.
+
+**Preconditions:**
+1. None.
+
+**Main Flow**
+1. Search for user ID to access the profile ou open an GameTrack linked profile URL.
+
+**Alternative Flows:**
+- Access a page of a user that doesn't exist returning an error.
+
+**Postconditions:**
+- See the public profile of a GameTrack profile that you searched for.
+
+**Related Requirements:**
+- FR-014
