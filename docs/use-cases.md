@@ -51,3 +51,20 @@ An authorized user responsible for platform administration and community moderat
 - UC-025 — Manage Users
 - UC-026 — Review Content Report
 - UC-027 — Moderate Community Content
+
+## 3. Use Case Descriptions
+
+## UC-001 - Register Account
+
+**Actor:** Guest
+
+**Goal:**
+Create a new GameTrack account.
+
+**Preconditions:**
+- This user is not authenticated.
+- The registration page is accessible
+
+**Main Flow:**
+1. The guest access the registration page.
+2. The 
