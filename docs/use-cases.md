@@ -132,3 +132,28 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 - FR-014
+
+### UC-016 - View Discussion
+
+**Actor:** Guest, User, Administrator
+
+**Goal:**
+- View a Discussion in comunity tab
+
+**Preconditions:**
+- Have the link of the post or access by the comunity tab
+
+**Main Flow:**
+1. Guest, user or admin access the comunity page
+2. Click in the post
+3. Access the poost
+
+**Alternative Flows:**
+1. Access a URL of that post has been deleted
+2. Return a error
+
+**Postconditions:**
+- Access the post
+
+**Related Requirements:**
+- FR-015
