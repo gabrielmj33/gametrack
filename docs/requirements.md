@@ -53,7 +53,7 @@ The player must be able to enter the date they finished playing the game.
 ### FR-013 — Add friends.
 The player must be able to add other users as friends.
 
-## FR-014 - View User Profile.
+### FR-014 - View User Profile.
 The guest, user or administrator must be able to access any public profile of GameTrack.
 
 ## 2. Non-Functional Requirements
