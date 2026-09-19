@@ -56,6 +56,9 @@ The player must be able to add other users as friends.
 ### FR-014 - View User Profile.
 The guest, user or administrator must be able to access any public profile of GameTrack.
 
+### FR-015 - View Public Post.
+The guest, user or administrator must be able to access any public post in GameTrack comunity.
+
 ## 2. Non-Functional Requirements
 
 ### NFR-001 — Security
