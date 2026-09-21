@@ -1,3 +1,5 @@
+# GameTrack — Use Cases
+
 ## 1. Actors
 
 ### Guest
@@ -14,86 +16,102 @@ An authorized user responsible for platform administration and community moderat
 
 ## 2. Use Case List
 
-## Account Management:
-- UC-001 — Register Account
-- UC-002 — Log In
-- UC-003 — Manage Account
-- Profile Management
-- UC-004 — Manage Profile
-- UC-005 — Manage Gaming Platform IDs
-  
-## Game Library
-- UC-006 — Add Game to Library
-- UC-007 — Remove Game from Library
-- UC-008 — Update Game Status
-- UC-009 — Rate Game
-- UC-010 — Write Game Review
-- UC-011 — Record Game Dates
-  
-## Social Features
-- UC-012 — View User Profile
-- UC-013 — Send Friend Request
-- UC-014 — Manage Friend Request
-- UC-015 — Remove Friend
-  
-## Community
-- UC-016 — View Discussion
-- UC-017 — Create Discussion
-- UC-018 — Edit Discussion
-- UC-019 — Delete Discussion
-- UC-020 — View Guide
-- UC-021 — Create Guide
-- UC-022 — Edit Guide
-- UC-023 — Delete Guide
-- UC-024 — Report Community Content
-  
-## Administration
-- UC-025 — Manage Users
-- UC-026 — Review Content Report
-- UC-027 — Moderate Community Content
+### Account Management
+
+* **UC-001 — Register Account**
+* **UC-002 — Log In**
+* **UC-003 — Manage Account**
+
+### Profile Management
+
+* **UC-004 — Manage Profile**
+* **UC-005 — Manage Gaming Platform IDs**
+
+### Game Library
+
+* **UC-006 — Add Game to Library**
+* **UC-007 — Remove Game from Library**
+* **UC-008 — Update Game Status**
+* **UC-009 — Rate Game**
+* **UC-010 — Write Game Review**
+* **UC-011 — Record Game Dates**
+
+### Social Features
+
+* **UC-012 — View User Profile**
+* **UC-013 — Send Friend Request**
+* **UC-014 — Manage Friend Request**
+* **UC-015 — Remove Friend**
+
+### Community
+
+* **UC-016 — View Discussion**
+* **UC-017 — Create Discussion**
+* **UC-018 — Edit Discussion**
+* **UC-019 — Delete Discussion**
+* **UC-020 — View Guide**
+* **UC-021 — Create Guide**
+* **UC-022 — Edit Guide**
+* **UC-023 — Delete Guide**
+* **UC-024 — Report Community Content**
+
+### Administration
+
+* **UC-025 — Manage Users**
+* **UC-026 — Review Content Report**
+* **UC-027 — Moderate Community Content**
 
 ## 3. Use Case Descriptions
 
-## UC-001 - Register Account
+### UC-001 — Register Account
 
 **Actor:** Guest
 
 **Goal:**
-Create a new GameTrack account.
+
+* Create a new GameTrack account.
 
 **Preconditions:**
-- This user is not authenticated.
-- The registration page is accessible
+
+1. The guest is not authenticated.
+2. The registration page is accessible.
 
 **Main Flow:**
-1. The guest access the registration page.
+
+1. The guest accesses the registration page.
 2. The guest provides the required registration information.
 3. The system validates the provided information.
 4. The system creates the user account.
-5. the system confirms the successful registration.
+5. The system confirms the successful registration.
 
 **Alternative Flows:**
-- If the provided information is invalid, the system displays an appropriate validation message.
-- If the email or username is already registered, the system informs the guest and does not create the account.
+
+* If the provided information is invalid, the system displays an appropriate validation message.
+* If the email or username is already registered, the system informs the guest and does not create the account.
 
 **Postconditions:**
-- A new GameTrack user account has been created.
+
+* A new GameTrack user account has been created.
 
 **Related Requirements:**
-- FR-001
 
-## UC-002 - Log In
+* FR-001
+
+### UC-002 — Log In
 
 **Actor:** Guest
 
 **Goal:**
-- Log In to an existing account
+
+* Log in to an existing account.
 
 **Preconditions:**
+
 1. The guest must have an existing GameTrack account.
 2. The login page must be accessible.
 
-**Main Flow**
+**Main Flow:**
+
 1. The guest accesses the login page.
 2. The guest enters their email and password.
 3. The system validates the provided credentials.
@@ -101,64 +119,18 @@ Create a new GameTrack account.
 5. The system grants access to the user's account.
 
 **Alternative Flows:**
-- If the provided email or password does not match the stored credentials, the system displays an appropriate message.
+
+* If the provided email or password does not match the stored credentials, the system displays an appropriate message.
 
 **Postconditions:**
-- The guest is authenticated and logged in to the account.
+
+* The guest is authenticated and logged in to the account.
 
 **Related Requirements:**
-- FR-002
 
-### UC-012 - View User Profile
+* FR-002
 
-**Actor:** Guest, User, Administrator
-
-**Goal:**
-- View a user's public profile.
-
-**Preconditions:**
-1. None.
-
-**Main Flow**
-1. The actor searches for a GameTrack user or accesses a GameTrack profile URL.
-2. The system searches for the requested user profile.
-3. The system displays the user's public profile.
-
-**Alternative Flows:**
-- If the requested user does not exist, the system displays an appropriate error message.
-
-**Postconditions:**
-- The actor can view the requested user's public profile.
-
-**Related Requirements:**
-- FR-014
-
-### UC-016 - View Discussion
-
-**Actor:** Guest, User, Administrator
-
-**Goal:**
-- View a Discussion in comunity tab
-
-**Preconditions:**
-- Have the link of the post or access by the comunity tab
-
-**Main Flow:**
-1. Guest, user or admin access the comunity page
-2. Click in the post
-3. Access the poost
-
-**Alternative Flows:**
-1. Access a URL of that post has been deleted
-2. Return a error
-
-**Postconditions:**
-- Access the post
-
-**Related Requirements:**
-- FR-015
-
-### UC-003 - Manage Account
+### UC-003 — Manage Account
 
 **Actor:** User, Administrator
 
@@ -168,13 +140,13 @@ Create a new GameTrack account.
 
 **Preconditions:**
 
-1. The user must be authenticated.
+1. The actor must be authenticated.
 
 **Main Flow:**
 
-1. The user accesses the account settings.
+1. The actor accesses the account settings.
 2. The system displays the current account information.
-3. The user modifies the desired information.
+3. The actor modifies the desired information.
 4. The system validates the changes.
 5. The system saves the updated account information.
 
@@ -188,9 +160,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-003
+* NFR-001
 
-### UC-004 - Manage Profile
+### UC-004 — Manage Profile
 
 **Actor:** User
 
@@ -220,9 +192,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-004
+* FR-003
 
-### UC-005 - Manage Gaming Platform IDs
+### UC-005 — Manage Gaming Platform IDs
 
 **Actor:** User
 
@@ -253,9 +225,14 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
+* FR-004
 * FR-005
+* FR-006
+* FR-007
+* FR-008
+* FR-009
 
-### UC-006 - Add Game to Library
+### UC-006 — Add Game to Library
 
 **Actor:** User
 
@@ -287,9 +264,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-006
+* FR-010
 
-### UC-007 - Remove Game from Library
+### UC-007 — Remove Game from Library
 
 **Actor:** User
 
@@ -319,9 +296,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-007
+* FR-011
 
-### UC-008 - Update Game Status
+### UC-008 — Update Game Status
 
 **Actor:** User
 
@@ -351,9 +328,11 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-008
+* FR-012
+* FR-013
+* FR-014
 
-### UC-009 - Rate Game
+### UC-009 — Rate Game
 
 **Actor:** User
 
@@ -369,7 +348,7 @@ Create a new GameTrack account.
 **Main Flow:**
 
 1. The user selects a game from their library.
-2. The user selects a rating.
+2. The user selects a rating from 1 to 10.
 3. The system validates the rating.
 4. The system saves the rating.
 
@@ -383,9 +362,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-009
+* FR-015
 
-### UC-010 - Write Game Review
+### UC-010 — Write Game Review
 
 **Actor:** User
 
@@ -416,9 +395,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-010
+* FR-016
 
-### UC-011 - Record Game Dates
+### UC-011 — Record Game Dates
 
 **Actor:** User
 
@@ -449,9 +428,40 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-011
+* FR-017
+* FR-018
 
-### UC-013 - Send Friend Request
+### UC-012 — View User Profile
+
+**Actor:** Guest, User, Administrator
+
+**Goal:**
+
+* View a user's public profile.
+
+**Preconditions:**
+
+1. None.
+
+**Main Flow:**
+
+1. The actor searches for a GameTrack user or accesses a GameTrack profile URL.
+2. The system searches for the requested user profile.
+3. The system displays the user's public profile.
+
+**Alternative Flows:**
+
+* If the requested user does not exist, the system displays an appropriate error message.
+
+**Postconditions:**
+
+* The actor can view the requested user's public profile.
+
+**Related Requirements:**
+
+* FR-022
+
+### UC-013 — Send Friend Request
 
 **Actor:** User
 
@@ -483,9 +493,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-012
+* FR-019
 
-### UC-014 - Manage Friend Request
+### UC-014 — Manage Friend Request
 
 **Actor:** User
 
@@ -515,9 +525,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-013
+* FR-020
 
-### UC-015 - Remove Friend
+### UC-015 — Remove Friend
 
 **Actor:** User
 
@@ -543,9 +553,39 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-014
+* FR-021
 
-### UC-017 - Create Discussion
+### UC-016 — View Discussion
+
+**Actor:** Guest, User, Administrator
+
+**Goal:**
+
+* View a discussion post published in the GameTrack community.
+
+**Preconditions:**
+
+1. The discussion must be publicly available.
+
+**Main Flow:**
+
+1. The actor accesses the GameTrack community.
+2. The actor selects a discussion.
+3. The system displays the discussion and its related game.
+
+**Alternative Flows:**
+
+* If the requested discussion does not exist or is no longer publicly available, the system displays an appropriate message.
+
+**Postconditions:**
+
+* The actor can view the requested discussion.
+
+**Related Requirements:**
+
+* FR-023
+
+### UC-017 — Create Discussion
 
 **Actor:** User
 
@@ -578,9 +618,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-017
+* FR-024
 
-### UC-018 - Edit Discussion
+### UC-018 — Edit Discussion
 
 **Actor:** User
 
@@ -611,9 +651,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-018
+* FR-025
 
-### UC-019 - Delete Discussion
+### UC-019 — Delete Discussion
 
 **Actor:** User
 
@@ -644,9 +684,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-019
+* FR-026
 
-### UC-020 - View Guide
+### UC-020 — View Guide
 
 **Actor:** Guest, User, Administrator
 
@@ -656,17 +696,17 @@ Create a new GameTrack account.
 
 **Preconditions:**
 
-1. None.
+1. The guide must be publicly available.
 
 **Main Flow:**
 
-1. The actor searches for a guide or accesses a guide through the community.
-2. The system searches for the requested guide.
+1. The actor accesses the GameTrack community.
+2. The actor selects a guide.
 3. The system displays the guide and its related game.
 
 **Alternative Flows:**
 
-* If the requested guide does not exist, the system displays an appropriate error message.
+* If the requested guide does not exist or is no longer publicly available, the system displays an appropriate message.
 
 **Postconditions:**
 
@@ -674,9 +714,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-020
+* FR-023
 
-### UC-021 - Create Guide
+### UC-021 — Create Guide
 
 **Actor:** User
 
@@ -709,9 +749,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-021
+* FR-027
 
-### UC-022 - Edit Guide
+### UC-022 — Edit Guide
 
 **Actor:** User
 
@@ -742,9 +782,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-022
+* FR-028
 
-### UC-023 - Delete Guide
+### UC-023 — Delete Guide
 
 **Actor:** User
 
@@ -775,15 +815,15 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-023
+* FR-029
 
-### UC-024 - Report Community Content
+### UC-024 — Report Community Content
 
 **Actor:** User
 
 **Goal:**
 
-* Report community content that violates the platform rules.
+* Report community content that violates GameTrack rules.
 
 **Preconditions:**
 
@@ -792,7 +832,7 @@ Create a new GameTrack account.
 
 **Main Flow:**
 
-1. The user accesses a community post or guide.
+1. The user accesses a community discussion or guide.
 2. The user selects the report option.
 3. The user provides a reason for the report.
 4. The system validates the report.
@@ -808,9 +848,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-024
+* FR-030
 
-### UC-025 - Manage Users
+### UC-025 — Manage Users
 
 **Actor:** Administrator
 
@@ -842,9 +882,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-025
+* FR-031
 
-### UC-026 - Review Content Report
+### UC-026 — Review Content Report
 
 **Actor:** Administrator
 
@@ -876,9 +916,9 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-026
+* FR-032
 
-### UC-027 - Moderate Community Content
+### UC-027 — Moderate Community Content
 
 **Actor:** Administrator
 
@@ -896,14 +936,14 @@ Create a new GameTrack account.
 
 1. The administrator accesses reported community content.
 2. The administrator reviews the content.
-3. The administrator determines whether the content violates platform rules.
+3. The administrator determines whether the content violates GameTrack rules.
 4. The administrator selects an appropriate moderation action.
 5. The system applies the selected action.
 6. The system records the moderation action.
 
 **Alternative Flows:**
 
-* If the content does not violate platform rules, the administrator can dismiss the report.
+* If the content does not violate GameTrack rules, the administrator can dismiss the report.
 
 **Postconditions:**
 
@@ -911,5 +951,4 @@ Create a new GameTrack account.
 
 **Related Requirements:**
 
-* FR-027
-
+* FR-033
