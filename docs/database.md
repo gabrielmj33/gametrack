@@ -201,3 +201,28 @@ Foreign Keys:
 Rules:
 - A report must reference either a discussion or a guide.
 - A report must not reference both at the same time.
+
+## 3. Database Constraints
+
+### User
+- username must be unique.
+- email must be unique.
+
+### GameLibraryEntry
+- A user must not have the same game duplicated in their library.
+- The combination of userId and gameId must be unique.
+
+### Review
+- A GameLibraryEntry can have at most one review.
+- gameLibraryEntryId must be unique in Review.
+
+### PlatformAccount
+- A user should have at most one account identifier for each gaming platform.
+
+### Friendship
+- requesterId and recipientId must reference different users.
+- Duplicate friendship relationships between the same two users must not be allowed.
+
+### Report
+- A report must reference either a discussion or a guide.
+- A report must not reference both simultaneously.
