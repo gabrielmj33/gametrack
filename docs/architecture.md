@@ -59,3 +59,35 @@ Initial backend modules include:
 This approach was chosen because it provides clear separation of responsibilities while avoiding the operational complexity of a microservices architecture.
 
 The modular structure also allows individual parts of the system to evolve independently and makes future extraction into separate services possible if the application eventually requires it.
+
+## 4. High-Level System Architecture
+
+GameTrack will be composed of separate frontend, backend, and data persistence layers.
+
+### Frontend
+
+The frontend will be responsible for the user interface and user interaction.
+
+It will communicate with the backend through HTTP requests using a REST API.
+
+The frontend will not access the database directly.
+
+### Backend
+
+The backend will contain the application's business rules, authentication, authorization, validation, and application logic.
+
+The backend will expose a REST API that will be consumed by the frontend.
+
+The backend will follow a Modular Monolith architecture, with functionality divided into modules based on business responsibilities.
+
+### Data Access
+
+Prisma ORM will be used by the backend to communicate with the PostgreSQL database.
+
+Prisma will manage database access and migrations while keeping database-related code organized.
+
+### Database
+
+PostgreSQL will be used as the relational database for GameTrack.
+
+The database will store persistent application data such as users, games, game libraries, reviews, friendships, community content, and reports.
