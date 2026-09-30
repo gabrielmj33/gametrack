@@ -38,3 +38,24 @@ The frontend, backend, and database should be independently deployable using clo
 
 ### Simplicity
 The architecture should avoid unnecessary infrastructure and technologies that do not solve an actual GameTrack requirement.
+
+## 3. Architectural Style
+
+GameTrack will use a Modular Monolith architecture.
+
+The backend will be deployed as a single application, while the internal codebase will be organized into independent modules based on business responsibilities.
+
+Initial backend modules include:
+
+- Authentication
+- Users
+- Games
+- Game Library
+- Reviews
+- Friendships
+- Community
+- Reports
+
+This approach was chosen because it provides clear separation of responsibilities while avoiding the operational complexity of a microservices architecture.
+
+The modular structure also allows individual parts of the system to evolve independently and makes future extraction into separate services possible if the application eventually requires it.
