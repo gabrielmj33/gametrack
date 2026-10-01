@@ -413,3 +413,40 @@ Frontend restrictions must not be treated as a security boundary.
 The REST API will be documented using OpenAPI and Swagger.
 
 The API documentation should describe routes, request payloads, response structures, and possible HTTP status codes.
+
+## 10. Authentication and Authorization
+
+GameTrack will use backend-controlled authentication and authorization.
+
+### Authentication
+
+Users will authenticate using their registered credentials.
+
+Passwords must never be stored in plain text and will be securely hashed before being persisted.
+
+Authentication credentials used by the browser should be stored using secure HTTP-only cookies when applicable.
+
+The exact token and session lifecycle will be defined during the implementation of the authentication module.
+
+### Authorization
+
+Authorization rules will always be enforced by the backend.
+
+The initial application roles are:
+
+- User
+- Administrator
+
+Administrative operations will require the appropriate administrator role.
+
+### Resource Ownership
+
+Users may only modify resources they own unless they have explicit administrative permissions.
+
+Examples include reviews, discussions, guides, profile information, and game library entries.
+
+### Route Protection
+
+Protected backend routes will use authentication and authorization mechanisms such as NestJS guards.
+
+Unauthenticated requests to protected resources should be rejected with appropriate HTTP status codes.
