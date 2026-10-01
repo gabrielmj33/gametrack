@@ -280,3 +280,85 @@ All security-sensitive and business-critical validation must also be performed b
 Next.js server-side capabilities should be used where appropriate for public and content-oriented pages.
 
 Client-side components should be used when browser interaction or local state is required.
+
+## 8. Data Architecture
+
+GameTrack will use PostgreSQL as its primary relational database.
+
+Database access will be performed through Prisma ORM and encapsulated by repository abstractions inside the backend modules.
+
+### PostgreSQL
+
+PostgreSQL will store the persistent application data and enforce relational integrity through primary keys, foreign keys, unique constraints, and other database rules.
+
+### Prisma ORM
+
+Prisma will provide the data access layer between the backend repositories and PostgreSQL.
+
+Prisma will be responsible for database queries, relationships, schema management, and migrations.
+
+### Repositories
+
+Repositories will encapsulate database operations and prevent persistence logic from being spread throughout application services.
+
+Application services should interact with repositories instead of directly accessing Prisma.
+
+### Database Migrations
+
+Database schema changes will be versioned through migrations.
+
+Production database structures should not be modified manually when a migration can represent the change.
+
+### Transactions
+
+Transactions will be used when multiple database operations must succeed or fail as a single unit.
+
+### Data Integrity
+
+Important business constraints should be protected both by application validation and database constraints when appropriate.
+
+Examples include unique usernames, unique email addresses, and preventing duplicate games in a user's library.
+
+### Configuration
+
+Database connection credentials will be provided through environment variables and must not be committed to source control.## 8. Data Architecture
+
+GameTrack will use PostgreSQL as its primary relational database.
+
+Database access will be performed through Prisma ORM and encapsulated by repository abstractions inside the backend modules.
+
+### PostgreSQL
+
+PostgreSQL will store the persistent application data and enforce relational integrity through primary keys, foreign keys, unique constraints, and other database rules.
+
+### Prisma ORM
+
+Prisma will provide the data access layer between the backend repositories and PostgreSQL.
+
+Prisma will be responsible for database queries, relationships, schema management, and migrations.
+
+### Repositories
+
+Repositories will encapsulate database operations and prevent persistence logic from being spread throughout application services.
+
+Application services should interact with repositories instead of directly accessing Prisma.
+
+### Database Migrations
+
+Database schema changes will be versioned through migrations.
+
+Production database structures should not be modified manually when a migration can represent the change.
+
+### Transactions
+
+Transactions will be used when multiple database operations must succeed or fail as a single unit.
+
+### Data Integrity
+
+Important business constraints should be protected both by application validation and database constraints when appropriate.
+
+Examples include unique usernames, unique email addresses, and preventing duplicate games in a user's library.
+
+### Configuration
+
+Database connection credentials will be provided through environment variables and must not be committed to source control.
