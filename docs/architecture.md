@@ -362,3 +362,54 @@ Examples include unique usernames, unique email addresses, and preventing duplic
 ### Configuration
 
 Database connection credentials will be provided through environment variables and must not be committed to source control.
+
+## 9. API Design
+
+GameTrack will expose a REST API over HTTPS using JSON as the primary data exchange format.
+
+The API will follow consistent resource-oriented conventions.
+
+### REST Conventions
+
+HTTP methods will represent the intended operation:
+
+- GET for retrieving resources.
+- POST for creating resources.
+- PATCH for partial updates.
+- DELETE for removing resources.
+
+Resource names should use plural nouns such as `/users`, `/games`, `/reviews`, and `/guides`.
+
+Action-oriented route names should be avoided when standard HTTP semantics can represent the operation.
+
+### API Versioning
+
+The API will use a versioned base path:
+
+`/api/v1`
+
+This allows future incompatible API changes to be introduced without immediately breaking existing clients.
+
+### DTOs and Validation
+
+Incoming request data will be defined using Data Transfer Objects.
+
+DTOs will be validated before the request reaches the application logic.
+
+### Responses
+
+API responses and errors should follow consistent structures.
+
+Appropriate HTTP status codes will be used to represent successful operations, validation errors, authentication failures, authorization failures, missing resources, and conflicts.
+
+### Authorization
+
+The backend will always enforce authorization rules.
+
+Frontend restrictions must not be treated as a security boundary.
+
+### Documentation
+
+The REST API will be documented using OpenAPI and Swagger.
+
+The API documentation should describe routes, request payloads, response structures, and possible HTTP status codes.
