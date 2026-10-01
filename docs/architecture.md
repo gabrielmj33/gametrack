@@ -534,3 +534,46 @@ Production secrets and database credentials must never be stored directly in the
 ### Configuration
 
 Environment-specific configuration will be provided through environment variables.
+
+## 13. Testing Strategy
+
+GameTrack will use automated testing at different levels to protect business rules, data integrity, and critical user flows.
+
+### Unit Tests
+
+Unit tests will focus on isolated application and business logic.
+
+Services and domain rules should be testable without requiring external infrastructure whenever possible.
+
+### Integration Tests
+
+Integration tests will verify the interaction between application components, repositories, Prisma, and a dedicated test database.
+
+### API Tests
+
+Backend endpoints will be tested to verify request validation, authorization rules, HTTP status codes, and API responses.
+
+### End-to-End Tests
+
+End-to-end tests will validate critical user flows through the complete application.
+
+Examples include authentication, adding games to the library, updating game status, and creating reviews.
+
+### Test Isolation
+
+Automated tests must not use the production database.
+
+Dedicated test configuration and test data should be used.
+
+### Testing Priorities
+
+Testing should prioritize:
+
+- Business rules
+- Authentication
+- Authorization
+- Data integrity
+- Critical API operations
+- Important user workflows
+
+Testing should provide meaningful confidence rather than focusing only on achieving a high coverage percentage.
