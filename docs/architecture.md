@@ -577,3 +577,40 @@ Testing should prioritize:
 - Important user workflows
 
 Testing should provide meaningful confidence rather than focusing only on achieving a high coverage percentage.
+
+## 14. CI/CD and Observability
+
+GameTrack will use automated checks to improve code quality and deployment reliability.
+
+### Continuous Integration
+
+GitHub Actions will be used to automatically validate changes pushed to the repository.
+
+The CI pipeline may include:
+
+- Dependency installation
+- Linting
+- Automated tests
+- Application builds
+
+Changes should not be deployed when critical CI checks fail.
+
+### Continuous Deployment
+
+Deployment automation may be introduced after the application reaches a stable deployment workflow.
+
+Initially, deployments may remain manual while continuous integration checks run automatically.
+
+### Logging
+
+The backend will produce structured application logs to help diagnose errors and unexpected behavior.
+
+Logs must not expose passwords, authentication tokens, secrets, or sensitive configuration.
+
+### Error Monitoring
+
+External error monitoring may be introduced for production environments if necessary.
+
+### Health Checks
+
+The backend should expose a health check endpoint that can be used by infrastructure services to verify application availability.
