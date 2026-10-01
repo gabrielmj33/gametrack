@@ -190,3 +190,93 @@ A module should not directly access repositories or internal implementation deta
 Database access should remain encapsulated within the module responsible for the corresponding data.
 
 Circular dependencies between modules should be avoided.
+
+## 7. Frontend Architecture
+
+The GameTrack frontend will be built using Next.js and will be responsible for presenting application data, handling user interactions, and communicating with the backend REST API.
+
+The frontend will not directly access the database or contain critical authorization and business rules.
+
+### Pages and Routes
+
+Application routes will represent the main areas of the system, including authentication, user profiles, games, game libraries, community discussions, and guides.
+
+### Components
+
+The user interface will be divided into reusable components.
+
+Large pages should be composed of smaller components with clearly defined responsibilities.
+
+### Feature Organization
+
+Frontend code should be organized around application features when appropriate, such as authentication, games, library management, reviews, friendships, and community features.
+
+This prevents unrelated functionality from becoming mixed inside large shared directories.
+
+### API Communication
+
+The frontend will communicate with the NestJS backend through the REST API.
+
+API communication should be encapsulated in dedicated frontend services or API functions rather than being spread throughout UI components.
+
+### State Management
+
+Local UI state should remain close to the components that use it.
+
+Data originating from the backend should be treated as server state, with the backend remaining the authoritative source of persistent application data.
+
+### Validation
+
+Frontend validation will be used to improve user experience and provide immediate feedback.
+
+All security-sensitive and business-critical validation must also be performed by the backend.
+
+### Rendering
+
+Next.js server-side capabilities should be used where appropriate for public and content-oriented pages.
+
+Client-side components should be used when browser interaction or local state is required.## 7. Frontend Architecture
+
+The GameTrack frontend will be built using Next.js and will be responsible for presenting application data, handling user interactions, and communicating with the backend REST API.
+
+The frontend will not directly access the database or contain critical authorization and business rules.
+
+### Pages and Routes
+
+Application routes will represent the main areas of the system, including authentication, user profiles, games, game libraries, community discussions, and guides.
+
+### Components
+
+The user interface will be divided into reusable components.
+
+Large pages should be composed of smaller components with clearly defined responsibilities.
+
+### Feature Organization
+
+Frontend code should be organized around application features when appropriate, such as authentication, games, library management, reviews, friendships, and community features.
+
+This prevents unrelated functionality from becoming mixed inside large shared directories.
+
+### API Communication
+
+The frontend will communicate with the NestJS backend through the REST API.
+
+API communication should be encapsulated in dedicated frontend services or API functions rather than being spread throughout UI components.
+
+### State Management
+
+Local UI state should remain close to the components that use it.
+
+Data originating from the backend should be treated as server state, with the backend remaining the authoritative source of persistent application data.
+
+### Validation
+
+Frontend validation will be used to improve user experience and provide immediate feedback.
+
+All security-sensitive and business-critical validation must also be performed by the backend.
+
+### Rendering
+
+Next.js server-side capabilities should be used where appropriate for public and content-oriented pages.
+
+Client-side components should be used when browser interaction or local state is required.
