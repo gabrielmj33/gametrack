@@ -450,3 +450,41 @@ Examples include reviews, discussions, guides, profile information, and game lib
 Protected backend routes will use authentication and authorization mechanisms such as NestJS guards.
 
 Unauthenticated requests to protected resources should be rejected with appropriate HTTP status codes.
+
+## 11. Security Architecture
+
+Security controls will be applied throughout the GameTrack frontend, backend, and data layers.
+
+### Password Security
+
+User passwords must never be stored in plain text.
+
+Passwords will be securely hashed before being persisted.
+
+### Input Validation
+
+All data received from clients must be treated as untrusted and validated by the backend.
+
+### Authorization
+
+Authentication, authorization, role checks, and resource ownership rules must always be enforced by the backend.
+
+Frontend restrictions must not be considered a security boundary.
+
+### Secrets Management
+
+Database credentials, authentication secrets, and external service credentials must be stored in environment variables.
+
+Secrets and `.env` files must not be committed to source control.
+
+### Transport Security
+
+Production communication between clients and application services must use HTTPS.
+
+### Rate Limiting
+
+Sensitive endpoints such as authentication routes should use rate limiting to reduce abuse and automated attacks.
+
+### Error Handling
+
+Internal implementation details, database errors, stack traces, and sensitive information must not be exposed through public API responses.
