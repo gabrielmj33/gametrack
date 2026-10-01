@@ -488,3 +488,49 @@ Sensitive endpoints such as authentication routes should use rate limiting to re
 ### Error Handling
 
 Internal implementation details, database errors, stack traces, and sensitive information must not be exposed through public API responses.
+
+## 12. Infrastructure and Deployment
+
+GameTrack will separate the frontend, backend, and database into independently deployable components.
+
+### Frontend Hosting
+
+The Next.js frontend will be deployed using a cloud platform suitable for Next.js applications.
+
+Vercel is the initial planned hosting platform.
+
+### Backend Hosting
+
+The NestJS backend will be deployed independently from the frontend.
+
+The specific cloud provider may be selected during the deployment phase according to the project's requirements, cost, and available platform capabilities.
+
+### Database Hosting
+
+PostgreSQL will be hosted using a managed cloud database service.
+
+Neon is the initial planned PostgreSQL provider.
+
+Only the backend will have direct access to database credentials.
+
+### Containerization
+
+The backend will be containerizable using Docker.
+
+Docker will not be required for everyday local development and may primarily be used to provide a reproducible deployment environment.
+
+### Source Control
+
+The project source code will be maintained in GitHub.
+
+Deployments may later be integrated with the GitHub repository to allow automated builds and deployments.
+
+### Environments
+
+Development and production environments will use separate configuration and credentials.
+
+Production secrets and database credentials must never be stored directly in the source code.
+
+### Configuration
+
+Environment-specific configuration will be provided through environment variables.
