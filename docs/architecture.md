@@ -142,3 +142,51 @@ Initial modules include:
 - Friendships
 - Community
 - Reports
+
+## 6. Backend Modules and Boundaries
+
+The GameTrack backend will be divided into business-oriented modules.
+
+Each module owns a specific part of the application and should expose only the functionality required by other modules.
+
+### Auth
+
+Responsible for authentication-related operations such as registration, login, logout, and credential validation.
+
+### Users
+
+Responsible for user accounts, profiles, and gaming platform accounts.
+
+### Games
+
+Responsible for the game catalog and game-related information.
+
+### Library
+
+Responsible for the user's personal game library, including game status, ratings, start dates, and completion dates.
+
+### Reviews
+
+Responsible for reviews associated with game library entries.
+
+### Friendships
+
+Responsible for friend requests and friendship relationships between users.
+
+### Community
+
+Responsible for community content, including discussions and guides associated with games.
+
+### Reports
+
+Responsible for reports submitted against community content and their moderation workflow.
+
+### Module Boundaries
+
+Modules should communicate through clearly defined public services or interfaces.
+
+A module should not directly access repositories or internal implementation details owned by another module.
+
+Database access should remain encapsulated within the module responsible for the corresponding data.
+
+Circular dependencies between modules should be avoided.
