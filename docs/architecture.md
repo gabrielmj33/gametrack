@@ -91,3 +91,54 @@ Prisma will manage database access and migrations while keeping database-related
 PostgreSQL will be used as the relational database for GameTrack.
 
 The database will store persistent application data such as users, games, game libraries, reviews, friendships, community content, and reports.
+
+## 5. Backend Architecture
+
+The GameTrack backend will follow a layered architecture inside each business module.
+
+Each module will separate HTTP communication, application logic, and data access responsibilities.
+
+The main backend layers are:
+
+### Controller Layer
+
+Controllers receive HTTP requests, extract request data, invoke the appropriate application services, and return HTTP responses.
+
+Controllers should not contain complex business rules.
+
+### Service Layer
+
+Services contain application logic and coordinate business operations.
+
+They are responsible for enforcing rules such as verifying resource ownership, preventing invalid operations, and coordinating data access.
+
+### Repository Layer
+
+Repositories provide an abstraction for data persistence.
+
+Services interact with repositories instead of directly accessing the database.
+
+Repositories will use Prisma ORM to communicate with PostgreSQL.
+
+### Data Access Layer
+
+Prisma ORM will be responsible for executing database operations and managing database migrations.
+
+### DTOs
+
+Data Transfer Objects will define and validate the structure of data entering the application through the API.
+
+### Modules
+
+The backend will be divided into modules based on business responsibilities.
+
+Initial modules include:
+
+- Auth
+- Users
+- Games
+- Library
+- Reviews
+- Friendships
+- Community
+- Reports
