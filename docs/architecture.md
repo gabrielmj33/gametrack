@@ -617,6 +617,6 @@ The backend should expose a health check endpoint that can be used by infrastruc
 
 ## 15. Architecture Diagram
 
-The following diagram provides a high-level view of the GameTrack architecture.
+The following diagram presents the high-level architecture and deployment structure of GameTrack.
 
 ![GameTrack Architecture Diagram](diagrams/gametrack-architecture-diagram.png)
