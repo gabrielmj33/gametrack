@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="FmMiQZd2SlY9NukF7p2X">
+    <mxGraphModel dx="772" dy="1555" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="291" pageHeight="413" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="176" width="230" x="30" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-53" edge="1" parent="1" source="VEYQdTNWtHwEstbpkO5O-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="VEYQdTNWtHwEstbpkO5O-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="155" width="230" x="30" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-52" edge="1" parent="1" source="VEYQdTNWtHwEstbpkO5O-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="VEYQdTNWtHwEstbpkO5O-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="140" width="230" x="30" y="-125" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-1" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;verticalAlign=middle;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;GameTrack Web&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Next.js + React&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Frontend Application&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="55" y="-95" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-2" parent="VEYQdTNWtHwEstbpkO5O-1" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-4" edge="1" parent="1" source="VEYQdTNWtHwEstbpkO5O-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145" y="-130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="30" x="130" y="-250" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="USER" vertex="1">
+          <mxGeometry height="30" width="60" x="155" y="-235" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="HTTPS" vertex="1">
+          <mxGeometry height="30" width="60" x="165" y="-180" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-7" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;verticalAlign=middle;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;GameTrack API&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;NestJS + TypeScript&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;Prisma ORM&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="55" y="121" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-8" parent="VEYQdTNWtHwEstbpkO5O-7" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="REST API / HTTPS" vertex="1">
+          <mxGeometry height="30" width="119" x="155" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="POSTGRESQL CONNECTION" vertex="1">
+          <mxGeometry height="30" width="125" x="165" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-17" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="" vertex="1">
+          <mxGeometry height="120" width="119" x="85.5" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PostgreSQL&lt;div&gt;Database&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="115" y="426" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Vercel" vertex="1">
+          <mxGeometry height="30" width="60" x="30" y="-125" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Backend Cloud Hosting" vertex="1">
+          <mxGeometry height="30" width="180" x="37" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VEYQdTNWtHwEstbpkO5O-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Neon" vertex="1">
+          <mxGeometry height="30" width="180" x="40" y="336" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
