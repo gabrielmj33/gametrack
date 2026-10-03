@@ -615,8 +615,14 @@ External error monitoring may be introduced for production environments if neces
 
 The backend should expose a health check endpoint that can be used by infrastructure services to verify application availability.
 
-## 15. Architecture Diagram
+## 15. Architecture Diagrams
 
-The following diagram presents the high-level architecture and deployment structure of GameTrack.
+The following diagrams provide visual representations of the GameTrack architecture.
+
+### High-Level Architecture
 
 ![GameTrack Architecture Diagram](diagrams/gametrack-architecture-diagram.png)
+
+### Backend Architecture
+
+![GameTrack Backend Architecture Diagram](diagrams/gametrack-backend-architecture-diagram.png)
