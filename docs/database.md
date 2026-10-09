@@ -21,6 +21,7 @@ Fields:
 - email
 - passwordHash
 - profilePicture
+- role
 
 Primary Key:
 - userId
