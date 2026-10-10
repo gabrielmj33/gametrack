@@ -28,3 +28,13 @@ model User {
 
   @@map("users")
 }
+
+model Game {
+  gameId        String @id @default(uuid()) @db.Uuid
+  title         String
+  releaseYear   Int?
+
+  gameLibraryEntries  GameLibraryEntry[]
+
+  @@map("games")
+}
