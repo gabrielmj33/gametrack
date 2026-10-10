@@ -18,6 +18,12 @@ enum UserRole {
   ADMIN
 }
 
+enum GameStatus {
+  PLAYING
+  COMPLETED
+  DROPPED
+}
+
 model User {
   userId        String @id @default(uuid()) @db.Uuid
   username      String @unique
