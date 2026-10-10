@@ -38,3 +38,19 @@ model Game {
 
   @@map("games")
 }
+
+model GameLibraryEntry {
+  gameLibraryEntryId  String      @id @default(uuid()) @db.Uuid
+  userId              String      @db.Uuid
+  gameId              String      @db.Uuid
+  status              GameStatus
+  rating              Int?
+  startDate           DateTime?
+  completionDate      DateTime?
+
+  user User @relation(fields: [userId], references: [userId])
+  game Game @relation(fields: [gameId], references: [gameId])
+
+  @@unique([userId, gameId])
+  @@map("game_library_entries")
+}
