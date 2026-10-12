@@ -4,8 +4,8 @@
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
   moduleFormat = "cjs"
 }
 
@@ -25,38 +25,52 @@ enum GameStatus {
 }
 
 model User {
-  userId        String @id @default(uuid()) @db.Uuid
-  username      String @unique
-  email         String @unique
-  passwordHash  String @unique
-  profilePicture  String?
-  role          UserRole @default(USER)
+  userId             String             @id @default(uuid()) @db.Uuid
+  username           String             @unique
+  email              String             @unique
+  passwordHash       String             @unique
+  profilePicture     String?
+  role               UserRole           @default(USER)
+  gameLibraryEntries GameLibraryEntry[]
 
   @@map("users")
 }
 
 model Game {
-  gameId        String @id @default(uuid()) @db.Uuid
-  title         String
-  releaseYear   Int?
+  gameId      String @id @default(uuid()) @db.Uuid
+  title       String
+  releaseYear Int?
 
-  gameLibraryEntries  GameLibraryEntry[]
+  gameLibraryEntries GameLibraryEntry[]
 
   @@map("games")
 }
 
 model GameLibraryEntry {
-  gameLibraryEntryId  String      @id @default(uuid()) @db.Uuid
-  userId              String      @db.Uuid
-  gameId              String      @db.Uuid
-  status              GameStatus
-  rating              Int?
-  startDate           DateTime?
-  completionDate      DateTime?
+  gameLibraryEntryId String     @id @default(uuid()) @db.Uuid
+  userId             String     @db.Uuid
+  gameId             String     @db.Uuid
+  status             GameStatus
+  rating             Int?
+  startDate          DateTime?
+  completionDate     DateTime?
 
-  user User @relation(fields: [userId], references: [userId])
-  game Game @relation(fields: [gameId], references: [gameId])
+  user   User    @relation(fields: [userId], references: [userId])
+  game   Game    @relation(fields: [gameId], references: [gameId])
+  review Review?
 
   @@unique([userId, gameId])
   @@map("game_library_entries")
+}
+
+model Review {
+  reviewId           String   @id @default(uuid()) @db.Uuid
+  gameLibraryEntryId String   @unique @db.Uuid
+  content            String
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  gameLibraryEntry GameLibraryEntry @relation(fields: [gameLibraryEntryId], references: [gameLibraryEntryId])
+
+  @@map("reviews")
 }
