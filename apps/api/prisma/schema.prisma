@@ -33,15 +33,23 @@ enum GamingPlatform {
   EPIC_GAMES
 }
 
+enum FriendshipStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
 model User {
-  userId             String             @id @default(uuid()) @db.Uuid
-  username           String             @unique
-  email              String             @unique
-  passwordHash       String             @unique
-  profilePicture     String?
-  role               UserRole           @default(USER)
-  gameLibraryEntries GameLibraryEntry[]
-  platformAccounts   PlatformAccount[]
+  userId                 String             @id @default(uuid()) @db.Uuid
+  username               String             @unique
+  email                  String             @unique
+  passwordHash           String             @unique
+  profilePicture         String?
+  role                   UserRole           @default(USER)
+  gameLibraryEntries     GameLibraryEntry[]
+  platformAccounts       PlatformAccount[]
+  sentFriendRequests     Friendship[]       @relation("FriendshipRequester")
+  receivedFriendRequests Friendship[]       @relation("FriendshipRecipient")
 
   @@map("users")
 }
@@ -96,4 +104,18 @@ model PlatformAccount {
 
   @@unique([userId, platform])
   @@map("platform_accounts")
+}
+
+model Friendship {
+  friendship  String           @id @default(uuid()) @db.Uuid
+  requesterId String           @db.Uuid
+  recipientId String           @db.Uuid
+  status      FriendshipStatus @default(PENDING)
+  createdAt   DateTime         @default(now())
+
+  requester User @relation("FriendshipRequester", fields: [requesterId], references: [userId])
+  recipient User @relation("FriendshipRecipient", fields: [recipientId], references: [userId])
+
+  @@unique([requesterId, recipientId])
+  @@map("friendship")
 }
