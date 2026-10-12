@@ -24,6 +24,15 @@ enum GameStatus {
   DROPPED
 }
 
+enum GamingPlatform {
+  STEAM
+  PLAYSTATION
+  XBOX
+  NINTENDO
+  GOG
+  EPIC_GAMES
+}
+
 model User {
   userId             String             @id @default(uuid()) @db.Uuid
   username           String             @unique
@@ -32,6 +41,7 @@ model User {
   profilePicture     String?
   role               UserRole           @default(USER)
   gameLibraryEntries GameLibraryEntry[]
+  platformAccounts   PlatformAccount[]
 
   @@map("users")
 }
@@ -73,4 +83,17 @@ model Review {
   gameLibraryEntry GameLibraryEntry @relation(fields: [gameLibraryEntryId], references: [gameLibraryEntryId])
 
   @@map("reviews")
+}
+
+model PlatformAccount {
+  platformAccountId String         @id @default(uuid()) @db.Uuid
+  userId            String         @db.Uuid
+  platform          GamingPlatform
+  identifier        String
+  isVisible         Boolean        @default(true)
+
+  user User @relation(fields: [userId], references: [userId])
+
+  @@unique([userId, platform])
+  @@map("platform_accounts")
 }
