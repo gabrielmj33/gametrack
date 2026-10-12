@@ -48,6 +48,7 @@ model User {
   role                   UserRole           @default(USER)
   gameLibraryEntries     GameLibraryEntry[]
   platformAccounts       PlatformAccount[]
+  guides Guide[]
   sentFriendRequests     Friendship[]       @relation("FriendshipRequester")
   receivedFriendRequests Friendship[]       @relation("FriendshipRecipient")
 
@@ -58,7 +59,7 @@ model Game {
   gameId      String @id @default(uuid()) @db.Uuid
   title       String
   releaseYear Int?
-
+  guides Guide[]
   gameLibraryEntries GameLibraryEntry[]
 
   @@map("games")
@@ -118,4 +119,19 @@ model Friendship {
 
   @@unique([requesterId, recipientId])
   @@map("friendship")
+}
+
+model Guide {
+  guideId     String    @id @default(uuid()) @db.Uuid
+  userId      String    @db.Uuid
+  gameId      String    @db.Uuid
+  title       String
+  content     String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [userId])
+  game Game @relation(fields: [gameId], references: [gameId])
+
+  @@map("guides")
 }
